@@ -1,10 +1,9 @@
 ﻿using Il2Cpp;
-using ModTemplate.Models;
-using RecordingUtils;
-using RecordingUtils.Commands;
+using RecordingUtils.FreeBird;
+using RecordingUtils.Models;
 using System.Text.Json;
 
-namespace ModTemplate.Commands
+namespace RecordingUtils.Commands
 {
 	internal class CmdCamSave : CommandBase
 	{
@@ -13,8 +12,8 @@ namespace ModTemplate.Commands
 
 		public override string Execute()
 		{
-			if (!FlyMode.m_Enabled)
-				return "cam_save only works in flymode";
+			if (!FlyMode.m_Enabled && (FBCam.Instance == null || !FBCam.Instance.Enabled))
+				return "cam_save only works in flymode or freebird";
 
 			var transform = GameManager.GetCurrentCamera().transform;
 

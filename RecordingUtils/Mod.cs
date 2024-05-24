@@ -1,6 +1,8 @@
-﻿using MelonLoader;
+﻿using Il2CppInterop.Runtime.Injection;
+using MelonLoader;
 using MelonLoader.Utils;
 using RecordingUtils.Commands;
+using RecordingUtils.FreeBird;
 
 namespace RecordingUtils
 {
@@ -18,6 +20,8 @@ namespace RecordingUtils
 			CommandList.Init();
 
 			Settings.OnLoad();
+
+			ClassInjector.RegisterTypeInIl2Cpp<FBCam>();
 		}
 	}
 }

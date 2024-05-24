@@ -1,4 +1,4 @@
-﻿namespace ModTemplate.Models
+﻿namespace RecordingUtils.Models
 {
 	public class CamPos
 	{

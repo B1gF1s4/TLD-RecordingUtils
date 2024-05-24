@@ -1,11 +1,10 @@
 ﻿using Il2Cpp;
-using ModTemplate.Models;
-using RecordingUtils;
-using RecordingUtils.Commands;
+using RecordingUtils.FreeBird;
+using RecordingUtils.Models;
 using System.Text.Json;
 using UnityEngine;
 
-namespace ModTemplate.Commands
+namespace RecordingUtils.Commands
 {
 	internal class CmdCamLoad : CommandBase
 	{
@@ -14,7 +13,7 @@ namespace ModTemplate.Commands
 
 		public override string Execute()
 		{
-			if (!FlyMode.m_Enabled)
+			if (!FlyMode.m_Enabled && (FBCam.Instance == null || !FBCam.Instance.Enabled))
 				return "cam_load only works in flymode";
 
 			var pos = Settings.DataManager.Load("cam_pos");
