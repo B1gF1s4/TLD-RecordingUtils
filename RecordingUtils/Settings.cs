@@ -11,6 +11,10 @@ namespace RecordingUtils
 		internal static readonly ModSettings ModSettings = new();
 		internal static readonly ModDataManager DataManager = new(nameof(RecordingUtils), false);
 
+		internal static bool RequiresBloomReset = false;
+		internal static bool RequiresHeartbeatReset = false;
+		internal static bool RequiresStumbleReset = false;
+
 		public static void OnLoad()
 		{
 			ModSettings.AddToModSettings("Recording Utils");
@@ -126,10 +130,22 @@ namespace RecordingUtils
 		[Description("")]
 		public bool CameraShake = true;
 
+		[Name("Bloom")]
+		[Description("")]
+		public bool EnableBloom = true;
+
+		[Section("Player")]
+
+		[Name("Heartbeat")]
+		[Description("")]
+		public bool EnableHeartbeat = false;
+
+		[Name("Stumble")]
+		[Description("")]
+		public bool EnableStumble = false;
+
 		public ModSettings() : base(Path.Combine(Mod.BaseDirectory, "user-settings"))
-		{
-			RefreshAllFields();
-		}
+		{ }
 
 		protected override void OnConfirm()
 		{
@@ -139,12 +155,15 @@ namespace RecordingUtils
 		protected override void OnChange(FieldInfo field, object? oldValue, object? newValue)
 		{
 			base.OnChange(field, oldValue, newValue);
-			RefreshAllFields();
-		}
 
-		public void RefreshAllFields()
-		{
+			if (field.Name == nameof(EnableBloom))
+				Settings.RequiresBloomReset = true;
 
+			if (field.Name == nameof(EnableHeartbeat))
+				Settings.RequiresHeartbeatReset = true;
+
+			if (field.Name == nameof(EnableStumble))
+				Settings.RequiresStumbleReset = true;
 		}
 	}
 }
