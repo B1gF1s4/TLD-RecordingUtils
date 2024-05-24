@@ -10,7 +10,7 @@ Mod for the Long Dark that adds better camera control for recording or streaming
 - download and place [DevConsole.dll](https://github.com/FINDarkside/TLD-Developer-Console/releases) in your [TLD]/Mods/ folder
 - download and place [RecordingUtils.dll](https://github.com/B1gF1s4/TLD-RecordingUtils/releases) in your [TLD]/Mods/ folder
 
-## Fetures
+## Features
 
 - command: cam_save
 	- saves current camera position and rotation
