@@ -10,20 +10,28 @@ Mod for the Long Dark that adds better camera control for recording or streaming
 - download and place [DevConsole.dll](https://github.com/FINDarkside/TLD-Developer-Console/releases) in your [TLD]/Mods/ folder
 - download and place [RecordingUtils.dll](https://github.com/B1gF1s4/TLD-RecordingUtils/releases) in your [TLD]/Mods/ folder
 
-## Fetures
+## Commands
 
-- command: cam_save
+- cam_freebird
+	- toggles freebird cam on/off
+- cam_save
 	- saves current camera position and rotation
 	- is tied to scene. can only load a save while in same scene
-	- only works in flymode
-- command: cam_load
+	- only works in freebird or flymode
+- cam_load
 	- loads last saved camera position and rotation
 	- is tied to scene. can only load a save while in same scene
-	- only works in flymode
-- modsettings for flymode slow, normal and fast speed
+	- only works in freebird or flymode
+
+## Settings
+
+- flymode slow, normal and fast speed
+- freebird cam settings
 
 ## Credits
 
 [ChefMaria](https://www.twitch.tv/chefmaria) initial idea
+
+[Digitalzombie](https://github.com/DigitalzombieTLD) FreeBird implementation
 
 [TLD Modding discord](https://discord.gg/nb2jQez) general awesomeness

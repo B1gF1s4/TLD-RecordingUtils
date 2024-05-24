@@ -10,6 +10,7 @@ namespace RecordingUtils.Commands
 		{
 			Commands.Add(new CmdCamSave());
 			Commands.Add(new CmdCamLoad());
+			Commands.Add(new CmdToggleFreeBird());
 
 			foreach (var cmd in Commands)
 			{
