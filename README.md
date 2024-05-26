@@ -32,8 +32,6 @@ Mod for the Long Dark that adds better camera control for recording or streaming
 
 [ChefMaria](https://www.twitch.tv/chefmaria) initial idea
 
-[TLD Modding discord](https://discord.gg/nb2jQez) general awesomeness
-
 [Digitalzombie](https://github.com/DigitalzombieTLD) FreeBird implementation
 
 [TLD Modding discord](https://discord.gg/nb2jQez) general awesomeness
