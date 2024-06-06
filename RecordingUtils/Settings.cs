@@ -23,6 +23,20 @@ namespace RecordingUtils
 
 	public class ModSettings : JsonModSettings
 	{
+		[Section("Animal Control")]
+
+		[Name("Radius")]
+		[Slider(1, 100)]
+		public float AnimalControlRadius = 50f;
+
+		[Name("Freeze")]
+		[Description("Key to toggle animal freeze")]
+		public KeyCode Freeze = KeyCode.Keypad1;
+
+		[Name("Wander")]
+		[Description("Key to toggle animal wander to player location")]
+		public KeyCode Wander = KeyCode.Keypad2;
+
 		[Section("Flymode")]
 
 		[Name("Flymode speed slow")]
@@ -130,19 +144,19 @@ namespace RecordingUtils
 		[Description("")]
 		public bool CameraShake = true;
 
-		[Name("Bloom")]
-		[Description("")]
-		public bool EnableBloom = true;
+		//[Name("Bloom")]
+		//[Description("")]
+		//public bool EnableBloom = true;
 
-		[Section("Player")]
+		//[Section("Player")]
 
-		[Name("Heartbeat")]
-		[Description("")]
-		public bool EnableHeartbeat = false;
+		//[Name("Heartbeat")]
+		//[Description("")]
+		//public bool EnableHeartbeat = false;
 
-		[Name("Stumble")]
-		[Description("")]
-		public bool EnableStumble = false;
+		//[Name("Stumble")]
+		//[Description("")]
+		//public bool EnableStumble = false;
 
 		public ModSettings() : base(Path.Combine(Mod.BaseDirectory, "user-settings"))
 		{ }
@@ -156,14 +170,14 @@ namespace RecordingUtils
 		{
 			base.OnChange(field, oldValue, newValue);
 
-			if (field.Name == nameof(EnableBloom))
-				Settings.RequiresBloomReset = true;
+			//if (field.Name == nameof(EnableBloom))
+			//	Settings.RequiresBloomReset = true;
 
-			if (field.Name == nameof(EnableHeartbeat))
-				Settings.RequiresHeartbeatReset = true;
+			//if (field.Name == nameof(EnableHeartbeat))
+			//	Settings.RequiresHeartbeatReset = true;
 
-			if (field.Name == nameof(EnableStumble))
-				Settings.RequiresStumbleReset = true;
+			//if (field.Name == nameof(EnableStumble))
+			//	Settings.RequiresStumbleReset = true;
 		}
 	}
 }

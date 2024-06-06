@@ -1,6 +1,6 @@
 ﻿using RecordingUtils.Commands;
 
-namespace ModTemplate.Commands
+namespace RecordingUtils.Commands
 {
 	public class CmdPlayerStumble : CommandBase
 	{

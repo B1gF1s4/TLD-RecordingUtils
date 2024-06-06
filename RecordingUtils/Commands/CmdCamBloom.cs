@@ -1,8 +1,4 @@
-﻿using Il2Cpp;
-using RecordingUtils;
-using RecordingUtils.Commands;
-
-namespace ModTemplate.Commands
+﻿namespace RecordingUtils.Commands
 {
 	public class CmdCamBloom : CommandBase
 	{
@@ -11,18 +7,19 @@ namespace ModTemplate.Commands
 
 		public override string Execute()
 		{
-			if (Settings.ModSettings.EnableBloom)
-			{
-				GameManager.GetCameraEffects().BloomEnable(false);
-				Settings.ModSettings.EnableBloom = false;
-				return "bloom disabled";
-			}
-			else
-			{
-				GameManager.GetCameraEffects().BloomEnable(true);
-				Settings.ModSettings.EnableBloom = true;
-				return "bloom enabled";
-			}
+			return "not implemented yet";
+			//if (Settings.ModSettings.EnableBloom)
+			//{
+			//	GameManager.GetCameraEffects().BloomEnable(false);
+			//	Settings.ModSettings.EnableBloom = false;
+			//	return "bloom disabled";
+			//}
+			//else
+			//{
+			//	GameManager.GetCameraEffects().BloomEnable(true);
+			//	Settings.ModSettings.EnableBloom = true;
+			//	return "bloom enabled";
+			//}
 		}
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using HarmonyLib;
 using Il2Cpp;
+using RecordingUtils.Commands;
 using RecordingUtils.FreeBird;
+using UnityEngine;
 
 namespace RecordingUtils.Patches
 {
@@ -14,5 +16,15 @@ namespace RecordingUtils.Patches
 
 			return !FBCam.Instance.Enabled;
 		}
+
+		public static void Postfix(ref InputManager __instance)
+		{
+			if (Input.GetKeyDown(Settings.ModSettings.Freeze))
+				uConsole.print(CommandList.CmdAnimalFreeze.Execute());
+
+			if (Input.GetKeyDown(Settings.ModSettings.Wander))
+				uConsole.print(CommandList.CmdAnimalWanderToMyLocation.Execute());
+		}
 	}
+
 }

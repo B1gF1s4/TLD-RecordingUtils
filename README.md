@@ -12,6 +12,12 @@ Mod for the Long Dark that adds better camera control for recording or streaming
 
 ## Commands
 
+- animal_freeze
+	- toggles animation freeze in radius
+	- is affected by animal control radius
+- animal_wander
+	- makes all animals in radius wander to current cam position
+	- is affected by animal control radius in mod settings
 - cam_freebird
 	- toggles freebird cam on/off
 - cam_save
@@ -25,6 +31,7 @@ Mod for the Long Dark that adds better camera control for recording or streaming
 
 ## Settings
 
+- animal control radius, key bindings
 - flymode slow, normal and fast speed
 - freebird cam settings
 
@@ -34,4 +41,4 @@ Mod for the Long Dark that adds better camera control for recording or streaming
 
 [Digitalzombie](https://github.com/DigitalzombieTLD) FreeBird implementation
 
-[TLD Modding discord](https://discord.gg/nb2jQez) general awesomeness
+[TLD Modding discord](https://discord.gg/nb2jQez) being awesome

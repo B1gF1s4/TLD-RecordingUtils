@@ -3,4 +3,5 @@
 ## 0.4.0
 
 - added Changelog.md
-- added command cam_bloom ??
+- added command animal_freeze
+- added command animal_wander

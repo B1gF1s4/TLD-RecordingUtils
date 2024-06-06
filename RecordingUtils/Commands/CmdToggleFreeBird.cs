@@ -1,7 +1,7 @@
 ﻿using RecordingUtils.Commands;
 using RecordingUtils.FreeBird;
 
-namespace ModTemplate.Commands
+namespace RecordingUtils.Commands
 {
 	public class CmdToggleFreeBird : CommandBase
 	{
